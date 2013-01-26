@@ -21,7 +21,7 @@ Some specifications
 How to use Object-Pool ?
 ------------------------
 
-Take a look inside the *example* directory.
+Take a look inside the [example](https://github.com/MyBoon/Object-Pool/tree/master/example) directory.
 
 A word about the PoolObject Interface
 -------------------------------------
