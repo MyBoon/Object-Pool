@@ -1,7 +1,7 @@
 Object-Pool
 ===========
 
-This is my own implementation of the well known object pool pattern.
+This is my c++ implementation of the well known object pool pattern.
 This Object pool doesn't claim to be better than all other Object Pool implementations. This is just **my** implementation :)
 
 What is an Object Pool ?
@@ -28,8 +28,7 @@ A word about the PoolObject Interface
 
 When you inherit from PoolObject, you are forced to implement two methods :
 
-- Clone : make another exact replica of the object.  
-In most case, this implementation can be used :
+- Clone : make another exact replica of the object. In most case, this implementation can be used :
 
 ```c++
 PoolObject *YourObject::clone(void) const
