@@ -16,7 +16,10 @@ class Factory
 
 public:
 	Factory(void){};
-	~Factory(void){};
+	~Factory(void){
+		for (auto item : _collection)
+			delete item.second;
+	};
 
 public:
 	template <typename T>
@@ -53,7 +56,11 @@ public:
 
 public:
 	Pool(const PoolType &p = AUTO_EXTEND) : _type(p) {}
-	virtual ~Pool(void){}
+	virtual ~Pool(void){
+		for (auto item : _collection)
+			for (auto object : item.second)
+				delete object;
+	}
 
 public:
 	template <typename T>
