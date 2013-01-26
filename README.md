@@ -1,7 +1,7 @@
 Object-Pool
 ===========
 
-This is my c++ implementation of the well known object pool pattern.
+This is my C++ implementation of the well known object pool pattern.
 This Object pool doesn't claim to be better than all other Object Pool implementations. This is just **my** implementation :)
 
 What is an Object Pool ?
