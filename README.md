@@ -18,7 +18,24 @@ Some specifications
 
 - Can be use as a Multi Object Pool (see example)
 
-How can I use Object-Pool ?
+How to use Object-Pool ?
 ===========================
 
 Take a look inside the *example* directory.
+
+A word about the PoolObject Interface
+=====================================
+
+When you inherit from PoolObject, you are forced to implement two methods :
+
+- Clone : make another exact replica of the object.  
+In most case, this implementation can be used :
+
+```c++
+PoolObject *YourObject::clone(void) const
+{
+	return (new YourObject(*this));
+}
+```
+
+- Reset : reset all object attributes. In this way, the pool always returns *clean* objects.
