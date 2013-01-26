@@ -94,7 +94,7 @@ public:
 			T *ptr = nullptr;
 			if (!_collection[type].empty())
 			{
-				ptr = dynamic_cast<T *>(_collection[type].front());
+				ptr = static_cast<T *>(_collection[type].front());
 				_collection[type].pop_front();
 			}
 			else if (_type == AUTO_EXTEND) {
