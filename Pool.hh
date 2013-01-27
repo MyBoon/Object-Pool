@@ -34,7 +34,7 @@ public:
 		for (auto it : _collection)
 		{
 			if (it.first == typeid(T).name())
-				return (dynamic_cast<T*>(it.second->clone()));
+				return (static_cast<T*>(it.second->clone()));
 		}
 		std::cerr << "Factory : can't create this object (" << typeid(T).name() << " doesn't exist)" << std::endl;
 		return nullptr;
